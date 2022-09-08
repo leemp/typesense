@@ -179,6 +179,11 @@ bool is_private_ip(uint32_t ip) {
         return true;
     }
 
+    // 16.x.y.z
+    if (b1 == 16) {
+        return true;
+    }
+
     // 172.16.0.0 - 172.31.255.255
     if ((b1 == 172) && (b2 >= 16) && (b2 <= 31)) {
         return true;
